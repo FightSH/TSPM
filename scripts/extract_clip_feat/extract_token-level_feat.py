@@ -105,7 +105,8 @@ def ImageClIP_feat_extract(dir_fps_path, dst_clip_path):
         video_img_list = sorted(glob.glob(os.path.join(dir_fps_path, video, '*.jpg')))
         
         # 计算采样帧数
-        params_frames = len(video_img_list)
+        # params_frames = len(video_img_list)
+        params_frames = 60
         samples = np.round(np.linspace(0, params_frames-1, params_frames))
 
         # 提取采样帧
