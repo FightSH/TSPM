@@ -73,9 +73,9 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--gpu", dest='gpu', type=str, default='0',
                         help='Set CUDA_VISIBLE_DEVICES environment variable, optional')
-    parser.add_argument("--dir_path", type=str, default='/data/users/guangyao_li/AVQA_Tsinghua/avqa_frame_1fps',
+    parser.add_argument("--dir_path", type=str, default='/mnt/sda/shenhao/datasets/MUSIC-AVQA/frame_1fps',
                         help='sec path')
-    parser.add_argument("--dst_path", type=str, default='/mnt/sda/shenhao/datasets/MUSIC-AVQA/feats/visual_tome14',
+    parser.add_argument("--dst_path", type=str, default='/mnt/sda/shenhao/datasets/MUSIC-AVQA/feats/tspm_visual_tome14',
                         help='sec save path')
     parser.add_argument("--sample_frames", type=int, default=10, help='sample frames')
     parser.add_argument("--tokens", type=int, default=14, help='merge tokens numbers')

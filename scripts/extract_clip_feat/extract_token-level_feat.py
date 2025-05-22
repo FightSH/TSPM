@@ -10,7 +10,7 @@ import glob
 import clip_net.clip
 
 # 设置设备（优先使用GPU，否则使用CPU）
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = "cuda:1" if torch.cuda.is_available() else "cpu"
 model, preprocess = clip_net.clip.load("ViT-B/32", device=device)
 
 def clip_feat_extract(img):
@@ -181,7 +181,7 @@ if __name__ == "__main__":
     C = 512
 
     # 设置输入和输出路径
-    dir_fps_path = '/data/MUSIC-AVQA/avqa-frames-1fps'
-    dst_clip_path = '/mnt/sda/shenhao/datasets/MUSIC-AVQA/feats/clip_vit_b32'
+    dir_fps_path = '/mnt/sda/shenhao/datasets/MUSIC-AVQA/frame_1fps'
+    dst_clip_path = '/mnt/sda/shenhao/datasets/MUSIC-AVQA/feats/tspm_clip_vit_b32'
     # 调用函数提取特征
     ImageClIP_feat_extract(dir_fps_path, dst_clip_path)

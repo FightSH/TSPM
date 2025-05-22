@@ -13,7 +13,7 @@ import clip_net.clip
 # 导入项目中的 CLIP 模型模块
 
 # 设置设备：默认尝试使用 cuda:2（适用于多卡环境），若不可用则使用 CPU
-device = "cuda:2" if torch.cuda.is_available() else "cpu"
+device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 # 加载预训练的 ViT-L/14@336px 模型及其图像预处理方法
 model, preprocess = clip_net.clip.load("ViT-L/14@336px", device=device)
